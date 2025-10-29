@@ -1,4 +1,4 @@
-Na aula 4 foi apresentado o conceito de ponteiro, no qual podemos armazenar valores e endereços de outras variáveis e acessá-las indiretamente. Para fixação desse conteúdo foi proposto o desenvolvimento de um semáforo, contruido com 3 LEDS (vemelho, verde e amarelo) de modo que o led_vermelho fica ligado por 6s, o led_amarelo por 4s e o led_verde por 2s. Para ligação dos LEDs também foram utilizados resistores de 330 Ohms, conectados entre o pino positivo do LED e a porta de entrada do microcontrolador; já o pino negatico do LED foi conectado ao GND da placa. O código foi construido no microcontrolador (ESP32).
+Na aula 4 foi apresentado o conceito de ponteiro, no qual podemos armazenar valores e endereços de outras variáveis e acessá-las indiretamente. Para fixação desse conteúdo foi proposto o desenvolvimento de um semáforo, contruido com 3 LEDS (vemelho, verde e amarelo) de modo que o led_vermelho fica ligado por 6s, o led_amarelo por 2s e o led_verde por 4s. Para ligação dos LEDs também foram utilizados resistores de 330 Ohms, conectados entre o pino positivo do LED e a porta de entrada do microcontrolador; já o pino negatico do LED foi conectado ao GND da placa. O código foi construido no microcontrolador (ESP32).
 
 Abaixo segue o código utilizado, bem como um vídeo de demonstração:
 
@@ -17,8 +17,8 @@ struct Luz {
 // Parâmetros de delay para cada pino
 Luz semaforo[] = {
   {led_vermelho, 6000},
-  {led_amarelo, 4000},
-  {led_verde, 2000}
+  {led_amarelo, 2000},
+  {led_verde, 4000}
 };
 
 // Cria o ponteiro, podendo ser chamado para relacionar a cor do LED ou o seu delay
